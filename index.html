@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
     <title>Yunfei GE</title>
+    <meta name="description" content="Academic Homepage of Dr. Yunfei Ge, Senior Researcher at TeleAI. Research interests: Embodied AI, Humanoid Robots, and VLA Models.">
+    <meta name="keywords" content="Yunfei Ge, 葛韵斐, TeleAI, Embodied AI, Humanoid Robot, Robotics, Tongji University">
+    <meta name="author" content="Yunfei Ge">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Yunfei GE - Academic Homepage">
+    <meta property="og:description" content="Senior Researcher in Embodied AI @ TeleAI. Exploring the future of general-purpose robots.">
+    <meta property="og:image" content="geyunfei.jpeg">
+    <meta property="og:url" content="https://gecloud24.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="icon.jpeg" type="image/jpeg">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     
@@ -40,14 +57,25 @@
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
         
-        /* 论文链接样式 */
-        .paper-link {
+        /* 论文标题链接样式 */
+        .paper-title {
+            position: relative;
+            display: inline-block;
             text-decoration: none;
-            color: #475569; /* slate-600 */
-            transition: color 0.2s;
+            color: #1e293b; /* slate-800 */
         }
-        .paper-link:hover {
+        .paper-title:hover {
             color: #0284c7; /* primary-600 */
+        }
+        
+        /* 极简链接样式 */
+        .minimal-link {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #0284c7;
+            text-decoration: none;
+        }
+        .minimal-link:hover {
             text-decoration: underline;
         }
     </style>
@@ -62,8 +90,8 @@
                 <div class="text-center lg:text-left">
                     <!-- Language Switcher -->
                     <div class="flex justify-center lg:justify-start mb-6">
-                        <button onclick="switchLang('zh')" id="btn-zh" class="px-3 py-1 text-sm font-bold rounded-l-md bg-slate-800 text-white transition-colors">中</button>
-                        <button onclick="switchLang('en')" id="btn-en" class="px-3 py-1 text-sm font-bold rounded-r-md bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors">En</button>
+                        <button onclick="switchLang('zh')" id="btn-zh" class="px-3 py-1 text-sm font-bold rounded-l-md bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors">中</button>
+                        <button onclick="switchLang('en')" id="btn-en" class="px-3 py-1 text-sm font-bold rounded-r-md bg-slate-800 text-white transition-colors">En</button>
                     </div>
 
                     <div class="relative inline-block mb-6">
@@ -77,7 +105,7 @@
                     </div>
                     
                     <!-- Chinese Profile -->
-                    <div class="lang-zh">
+                    <div class="lang-zh hidden">
                         <h1 class="text-3xl font-bold text-slate-900 mb-2">葛韵斐</h1>
                         <h2 class="text-xl font-medium text-slate-600 mb-2">Dr. Yunfei Ge</h2>
                         
@@ -89,7 +117,7 @@
                     </div>
 
                     <!-- English Profile -->
-                    <div class="lang-en hidden">
+                    <div class="lang-en">
                         <h1 class="text-3xl font-bold text-slate-900 mb-2">Yunfei Ge</h1>
                         <h2 class="text-xl font-medium text-slate-600 mb-2">Ph.D.</h2>
                         
@@ -121,7 +149,7 @@
                         <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=FDLIY9oAAAAJ" target="_blank" class="p-2 text-slate-500 hover:text-primary-600 hover:bg-slate-100 rounded-lg transition-all" title="Google Scholar">
                             <i data-lucide="graduation-cap" class="w-5 h-5"></i>
                         </a>
-                        <a href="https://github.com/gecloud24" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all" title="GitHub">
+                        <a href="https://github.com/gecloud24" target="_blank" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all" title="GitHub">
                             <i data-lucide="github" class="w-5 h-5"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/%E9%9F%B5%E6%96%90-%E8%91%9B-a303683a3/" target="_blank" class="p-2 text-slate-500 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all" title="LinkedIn">
@@ -132,8 +160,8 @@
                 
                 <!-- Tags -->
                 <div class="hidden lg:block border-t border-slate-100 pt-6">
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-zh">技术栈 & 兴趣</h3>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-en hidden">Interests</h3>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-zh hidden">技术栈 & 兴趣</h3>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-en">Interests</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Humanoid Robots</span>
                         <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Teleoperation</span>
@@ -148,7 +176,7 @@
             <main class="lg:col-span-9 space-y-16">
                 
                 <!-- ================= CHINESE CONTENT ================= -->
-                <div class="lang-zh space-y-16">
+                <div class="lang-zh hidden space-y-16">
                     <section id="about-zh" class="space-y-4">
                         <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">个人简介</h2>
                         <p class="leading-relaxed text-slate-600">
@@ -264,7 +292,7 @@
                 </div>
 
                 <!-- ================= ENGLISH CONTENT ================= -->
-                <div class="lang-en hidden space-y-16">
+                <div class="lang-en space-y-16">
                     <section id="about-en" class="space-y-4">
                         <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Biography</h2>
                         <p class="leading-relaxed text-slate-600">
@@ -339,6 +367,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <!-- Siemens -->
                             <div class="relative pl-8 group">
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
@@ -348,6 +377,7 @@
                                 </div>
                                 <div class="text-sm text-slate-600 font-medium mb-2">Senior Researcher | Future Automation</div>
                             </div>
+
                             <!-- EY -->
                             <div class="relative pl-8 group">
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
@@ -357,6 +387,7 @@
                                 </div>
                                 <div class="text-sm text-slate-600 font-medium mb-2">Intern</div>
                             </div>
+
                             <!-- Govt -->
                             <div class="relative pl-8 group">
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
@@ -366,6 +397,7 @@
                                 </div>
                                 <div class="text-sm text-slate-600 font-medium mb-2">Intern ("Tongxing Plan")</div>
                             </div>
+
                             <!-- Tongji PhD -->
                             <div class="relative pl-8 group">
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
@@ -382,8 +414,8 @@
                 <!-- Publications Section (Shared List) -->
                 <section id="publications-shared" class="space-y-8">
                     <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-                        <h2 class="text-2xl font-bold text-slate-900 lang-zh">科研成果</h2>
-                        <h2 class="text-2xl font-bold text-slate-900 lang-en hidden">Publications</h2>
+                        <h2 class="text-2xl font-bold text-slate-900 lang-zh hidden">科研成果</h2>
+                        <h2 class="text-2xl font-bold text-slate-900 lang-en">Publications</h2>
                         <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=FDLIY9oAAAAJ" target="_blank" class="text-sm text-primary-600 hover:text-primary-700 font-medium link-hover">Google Scholar ></a>
                     </div>
 
@@ -391,7 +423,7 @@
                         
                         <!-- Paper 0 -->
                         <div class="pl-4">
-                            <a href="https://arxiv.org/abs/2509.02055" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://arxiv.org/abs/2509.02055" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 Align-Then-stEer: Adapting the Vision-Language Action Models through Unified Latent Guidance
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
@@ -399,13 +431,13 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>arXiv Preprint, 2025</span>
-                                <a href="https://arxiv.org/abs/2509.02055" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://arxiv.org/abs/2509.02055" target="_blank" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
 
                         <!-- Paper 1 -->
                         <div class="pl-4">
-                            <a href="https://link.springer.com/article/10.1007/s11548-022-02701-4" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://link.springer.com/article/10.1007/s11548-022-02701-4" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 A 3D Reconstruction Method based on Multi-views of Contours Segmented with CNN-Transformer for Long Bones
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
@@ -413,13 +445,13 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>International Journal of Computer Assisted Radiology and Surgery, 2022</span>
-                                <a href="https://link.springer.com/article/10.1007/s11548-022-02701-4" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://link.springer.com/article/10.1007/s11548-022-02701-4" target="_blank" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
 
                         <!-- Paper 2 -->
                         <div class="pl-4">
-                            <a href="https://link.springer.com/article/10.1186/s12880-022-00760-2" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://link.springer.com/article/10.1186/s12880-022-00760-2" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 Grayscale Medical Image Segmentation Method based on 2D&3D Object Detection with Deep Learning
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
@@ -427,13 +459,13 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>BMC Medical Imaging, 2022</span>
-                                <a href="https://link.springer.com/article/10.1186/s12880-022-00760-2" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://link.springer.com/article/10.1186/s12880-022-00760-2" target="_blank" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
 
                         <!-- Paper 3 -->
                         <div class="pl-4">
-                            <a href="https://www.tandfonline.com/doi/full/10.1080/13873954.2021.1920618" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/13873954.2021.1920618" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 Dynamic analysis of an over-constrained parallel mechanism with the principle of virtual work
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
@@ -441,29 +473,28 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>Mathematical and Computer Modelling of Dynamical Systems, 2022</span>
-                                <a href="https://www.tandfonline.com/doi/full/10.1080/13873954.2021.1920618" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://www.tandfonline.com/doi/full/10.1080/13873954.2021.1920618" target="_blank" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
 
-                        <!-- PhD Thesis (NEW) -->
+                        <!-- PhD Thesis -->
                         <div class="pl-4">
-                            <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CDFD&dbname=CDFDLAST2025&filename=1025851417.nh&uniplatform=OVERSEA&v=I1iZeOq2OTD0ze2JGZzqIVL8c7ENw3Gg92vNrRxT4fFA6n8cZXFioo8G-idqWq5r" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
-                                <span class="lang-zh">基于三维重建的肢体骨骼外固定并联矫形器定制化研究 (博士学位论文)</span>
-                                <span class="lang-en hidden">Research on Customization of Parallel Orthosis for Limb Bone External Fixation Based on 3D Reconstruction (Ph.D. Thesis)</span>
+                            <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CDFD&dbname=CDFDLAST2025&filename=1025851417.nh&uniplatform=OVERSEA&v=I1iZeOq2OTD0ze2JGZzqIVL8c7ENw3Gg92vNrRxT4fFA6n8cZXFioo8G-idqWq5r" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
+                                <span class="lang-en">Research on Customization of Parallel Orthosis for Limb Bone External Fixation Based on 3D Reconstruction (Ph.D. Thesis)</span>
+                                <span class="lang-zh hidden">基于三维重建的肢体骨骼外固定并联矫形器定制化研究 (博士学位论文)</span>
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
-                                <span class="lang-zh"><span class="font-bold text-slate-900">葛韵斐</span></span>
-                                <span class="lang-en hidden"><span class="font-bold text-slate-900">Yunfei Ge</span></span>
+                                <span class="font-bold text-slate-900 lang-en">Yunfei Ge</span><span class="font-bold text-slate-900 lang-zh hidden">葛韵斐</span>
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
-                                <span><span class="lang-zh">同济大学</span><span class="lang-en hidden">Tongji University</span>, 2023</span>
-                                <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CDFD&dbname=CDFDLAST2025&filename=1025851417.nh&uniplatform=OVERSEA&v=I1iZeOq2OTD0ze2JGZzqIVL8c7ENw3Gg92vNrRxT4fFA6n8cZXFioo8G-idqWq5r" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[CNKI Link]</a>
+                                <span><span class="lang-en">Tongji University</span><span class="lang-zh hidden">同济大学</span>, 2023</span>
+                                <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CDFD&dbname=CDFDLAST2025&filename=1025851417.nh&uniplatform=OVERSEA&v=I1iZeOq2OTD0ze2JGZzqIVL8c7ENw3Gg92vNrRxT4fFA6n8cZXFioo8G-idqWq5r" target="_blank" class="minimal-link">[CNKI]</a>
                             </div>
                         </div>
 
                         <!-- Paper 4 -->
                         <div class="pl-4">
-                            <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2023&filename=YQXB202301019&uniplatform=OVERSEA&v=gr5lP3kWTbvwQbVfM6qF61YyQxWMmBG9koQuL5XbtUID3V-SI9ObkD4qoOn5M9Pm" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2023&filename=YQXB202301019&uniplatform=OVERSEA&v=gr5lP3kWTbvwQbVfM6qF61YyQxWMmBG9koQuL5XbtUID3V-SI9ObkD4qoOn5M9Pm" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 <span class="lang-zh">基于神经网络的足踝外固定矫形方案设计方法</span>
                                 <span class="lang-en hidden">Design method of ankle external fixation orthosis based on neural network (in Chinese)</span>
                             </a>
@@ -473,13 +504,13 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span><span class="lang-zh">仪器仪表学报</span><span class="lang-en hidden">Chinese Journal of Scientific Instrument</span>, 2023</span>
-                                <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2023&filename=YQXB202301019&uniplatform=OVERSEA&v=gr5lP3kWTbvwQbVfM6qF61YyQxWMmBG9koQuL5XbtUID3V-SI9ObkD4qoOn5M9Pm" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[CNKI Link]</a>
+                                <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2023&filename=YQXB202301019&uniplatform=OVERSEA&v=gr5lP3kWTbvwQbVfM6qF61YyQxWMmBG9koQuL5XbtUID3V-SI9ObkD4qoOn5M9Pm" target="_blank" class="minimal-link">[CNKI]</a>
                             </div>
                         </div>
                         
                         <!-- Paper 5 -->
                         <div class="pl-4">
-                            <a href="https://hit.alljournals.cn/html/hitxb_cn/2020/1/20200106.html" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://hit.alljournals.cn/html/hitxb_cn/2020/1/20200106.html" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 <span class="lang-zh">ARMG 吊具辅助钢丝绳牵引式主动防摇方法</span>
                                 <span class="lang-en hidden">Spreader aided wire rope traction type active anti-swing method for ARMG (in Chinese)</span>
                             </a>
@@ -489,13 +520,13 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span><span class="lang-zh">哈尔滨工业大学学报</span><span class="lang-en hidden">Journal of Harbin Institute of Technology</span>, 2020</span>
-                                <a href="https://hit.alljournals.cn/html/hitxb_cn/2020/1/20200106.html" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://hit.alljournals.cn/html/hitxb_cn/2020/1/20200106.html" target="_blank" class="minimal-link">[Link]</a>
                             </div>
                         </div>
 
                          <!-- Paper 6 -->
                         <div class="pl-4">
-                            <a href="https://html.rhhz.net/BJHKHTDXXBZRB/20190611.htm" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://html.rhhz.net/BJHKHTDXXBZRB/20190611.htm" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 <span class="lang-zh">2UPR-RRU 并联机构及其运动学分析</span>
                                 <span class="lang-en hidden">2UPR-RRU parallel mechanism and its kinematics analysis (in Chinese)</span>
                             </a>
@@ -505,26 +536,27 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span><span class="lang-zh">北京航空航天大学学报</span><span class="lang-en hidden">Journal of Beijing University of Aeronautics and Astronautics</span>, 2019</span>
-                                <a href="https://html.rhhz.net/BJHKHTDXXBZRB/20190611.htm" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://html.rhhz.net/BJHKHTDXXBZRB/20190611.htm" target="_blank" class="minimal-link">[Link]</a>
                             </div>
                         </div>
 
                         <!-- Paper 7 -->
                         <div class="pl-4">
-                            <span class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://ieeexplore.ieee.org/document/9476181" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 Optimization of deformity correction modes and their control methods for hexapod robot based external fixator
-                            </span>
+                            </a>
                             <div class="text-sm text-slate-600 mt-1">
                                 <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yuantao Sun
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>ICMIMT 2021</span>
+                                <a href="https://ieeexplore.ieee.org/document/9476181" target="_blank" class="minimal-link">[IEEE Link]</a>
                             </div>
                         </div>
 
                         <!-- Paper 8 -->
                         <div class="pl-4">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/8995880" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8995880" target="_blank" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 Research on the steering stability of autonomous straddle carrier
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
@@ -532,13 +564,13 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>ICACMVE 2019</span>
-                                <a href="https://ieeexplore.ieee.org/abstract/document/8995880" target="_blank" class="not-italic text-xs font-medium text-primary-600 hover:underline">[PDF/Link]</a>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8995880" target="_blank" class="minimal-link">[IEEE Link]</a>
                             </div>
                         </div>
 
                         <!-- Paper 9 -->
                         <div class="pl-4">
-                            <span class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <span class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 <span class="lang-zh">多畸形矫正模式下的六轴外固定支架调整方案计算方法研究</span>
                                 <span class="lang-en hidden">Calculation method of adjustment scheme for hexapod external fixator under multi-deformity correction modes (in Chinese)</span>
                             </span>
@@ -553,7 +585,7 @@
 
                         <!-- Patent -->
                         <div class="pl-4">
-                            <span class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors">
+                            <span class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 <span class="lang-zh">一种全周三自由度并联机构</span>
                                 <span class="lang-en hidden">A 3-DOF Parallel Mechanism (Patent)</span>
                             </span>
@@ -562,6 +594,7 @@
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>2019</span>
+                                <span class="text-xs text-slate-400 border border-slate-200 px-2 rounded">Patent</span>
                             </div>
                         </div>
 
@@ -570,11 +603,11 @@
 
                 <!-- Awards Section -->
                 <section id="awards-container" class="space-y-4">
-                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 lang-zh">荣誉奖项</h2>
-                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 lang-en hidden">Honors & Awards</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 lang-zh hidden">荣誉奖项</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 lang-en">Honors & Awards</h2>
                     
                     <!-- Chinese Awards -->
-                    <div class="lang-zh">
+                    <div class="lang-zh hidden">
                         <ul class="space-y-2 text-sm text-slate-600">
                             <li class="flex items-start gap-2">
                                 <i data-lucide="award" class="w-4 h-4 text-yellow-500 mt-0.5"></i>
@@ -588,7 +621,7 @@
                     </div>
 
                     <!-- English Awards -->
-                    <div class="lang-en hidden">
+                    <div class="lang-en">
                         <ul class="space-y-2 text-sm text-slate-600">
                             <li class="flex items-start gap-2">
                                 <i data-lucide="award" class="w-4 h-4 text-yellow-500 mt-0.5"></i>
@@ -611,7 +644,13 @@
     </div>
 
     <script>
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide library failed to load.");
+            }
+        });
 
         function switchLang(lang) {
             const zhElements = document.querySelectorAll('.lang-zh');
@@ -628,8 +667,6 @@
                 
                 btnZh.classList.add('bg-slate-100', 'text-slate-500');
                 btnZh.classList.remove('bg-slate-800', 'text-white');
-                
-                // Keep body/html scroll position but smooth
             } else {
                 enElements.forEach(el => el.classList.add('hidden'));
                 zhElements.forEach(el => el.classList.remove('hidden'));
