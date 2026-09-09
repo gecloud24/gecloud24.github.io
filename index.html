@@ -7,13 +7,13 @@
     
     <!-- SEO Meta Tags -->
     <title>Yunfei GE</title>
-    <meta name="description" content="Academic Homepage of Dr. Yunfei Ge, Senior Researcher at TeleAI. Research interests: Embodied AI, Humanoid Robots, and VLA Models.">
+    <meta name="description" content="Yunfei Ge builds embodied AI products and robotic systems at TeleAI, connecting product definition, multidisciplinary engineering and real-world applications.">
     <meta name="keywords" content="Yunfei Ge, 葛韵斐, TeleAI, Embodied AI, Humanoid Robot, Robotics, Tongji University">
     <meta name="author" content="Yunfei Ge">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Yunfei GE - Academic Homepage">
-    <meta property="og:description" content="Senior Researcher in Embodied AI @ TeleAI. Exploring the future of general-purpose robots.">
+    <meta property="og:title" content="Yunfei Ge | Embodied AI, Products & Systems">
+    <meta property="og:description" content="Product leadership and robotic systems engineering. Explore my work in robots, embodied data, teleoperation and real-world applications.">
     <meta property="og:image" content="https://gecloud24.github.io/geyunfei.jpeg">
     <meta property="og:url" content="https://gecloud24.github.io/">
     <meta property="og:type" content="website">
@@ -56,6 +56,35 @@
         .minimal-link:hover {
             text-decoration: underline;
         }
+
+        /* Product and systems portfolio */
+        .profile-focus{color:#0369a1;font-size:.78rem;line-height:1.7;padding:5px 0}
+        main,aside{min-width:0} section{scroll-margin-top:28px}
+        .portfolio-intro{position:relative;padding:34px 0 26px;border-top:3px solid #0284c7;background:linear-gradient(120deg,#f0f9ff88,transparent 75%)}
+        .eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;color:#0369a1;text-transform:uppercase;margin-bottom:16px}
+        .portfolio-intro h2{font-size:clamp(28px,3.2vw,43px);font-weight:700;line-height:1.32;letter-spacing:-.035em;color:#0f172a;max-width:760px;margin-bottom:22px}
+        .portfolio-intro h2 span{color:#0284c7}
+        .portfolio-intro p{font-size:15px;line-height:1.95;color:#475569;margin:12px 0;max-width:760px}
+        .portfolio-intro strong{color:#0f172a;font-weight:600}
+        .work-chain{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #cbd5e1;border-bottom:1px solid #cbd5e1;margin-top:25px;padding:16px 0;gap:12px}
+        .work-chain small{display:block;color:#0284c7;font:11px monospace;margin-bottom:6px}.work-chain b{font-size:13px;color:#1e293b;font-weight:600}
+        .section-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #cbd5e1;padding-bottom:12px;margin-bottom:22px;gap:12px}
+        .section-head h2{font-size:24px;color:#0f172a;font-weight:700}.section-head span{font-size:11px;color:#64748b;letter-spacing:.1em}
+        .news-list{list-style:none}.news-item{display:grid;grid-template-columns:78px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid #f1f5f9}
+        .news-item time{font:12px monospace;color:#64748b;padding-top:4px}.news-item h3{font-size:15px;color:#0f172a;font-weight:600;margin-bottom:6px}.news-item p{font-size:14px;line-height:1.8;color:#64748b}
+        .press-link{display:inline-block;color:#0369a1;font-size:12px;margin:8px 16px 0 0;text-decoration:underline;text-underline-offset:4px}
+        .role-summary{font-size:15px;line-height:1.9;color:#475569;margin:16px 0 22px}
+        .product-index{counter-reset:product}.product-entry{border-top:1px solid #e2e8f0;padding:18px 0}.product-entry:last-child{border-bottom:1px solid #e2e8f0}
+        .product-entry summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:30px 1fr 20px;gap:10px;align-items:start}.product-entry summary::-webkit-details-marker{display:none}
+        .product-entry summary:before{counter-increment:product;content:counter(product,decimal-leading-zero);font:12px monospace;color:#0284c7;padding-top:5px}
+        .product-entry summary:after{content:'+';color:#0284c7;font-size:20px;line-height:1.2}.product-entry[open] summary:after{content:'−'}
+        .product-entry h4{font-weight:600;color:#0f172a;font-size:16px}.product-entry summary p{font-size:13px;color:#64748b;margin-top:5px;line-height:1.7}
+        .product-detail{padding:13px 30px 0 40px;font-size:14px;line-height:1.85;color:#475569}.product-detail p+p{margin-top:8px}
+        .delivery-note{margin-top:22px;padding:18px 0;border-bottom:1px solid #cbd5e1;font-size:14px;line-height:1.9;color:#475569}.delivery-note strong{color:#0f172a}
+        .page-nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:12px;color:#64748b}.page-nav a:hover{color:#0284c7}.page-nav.hidden{display:none}
+        a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #0284c7;outline-offset:5px}
+        @media(max-width:640px){.portfolio-intro{padding-top:25px}.portfolio-intro h2{font-size:29px}.work-chain{grid-template-columns:repeat(2,1fr);gap:16px}.news-item{grid-template-columns:60px 1fr;gap:12px}.section-head span{display:none}.product-detail{padding-right:0}.product-entry h4{font-size:15px}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}
     </style>
 </head>
 <body class="bg-white text-slate-700 font-sans antialiased selection:bg-primary-100 selection:text-primary-900">
@@ -68,8 +97,8 @@
                 <div class="text-center lg:text-left">
                     <!-- Language Switcher -->
                     <div class="flex justify-center lg:justify-start mb-6">
-                        <button type="button" data-lang-switch="zh" id="btn-zh" class="px-3 py-1 text-sm font-bold rounded-l-md bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors">中</button>
-                        <button type="button" data-lang-switch="en" id="btn-en" class="px-3 py-1 text-sm font-bold rounded-r-md bg-slate-800 text-white transition-colors">En</button>
+                        <button type="button" data-lang-switch="zh" id="btn-zh" aria-pressed="false" class="px-3 py-1 text-sm font-bold rounded-l-md bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors">中</button>
+                        <button type="button" data-lang-switch="en" id="btn-en" aria-pressed="true" class="px-3 py-1 text-sm font-bold rounded-r-md bg-slate-800 text-white transition-colors">En</button>
                     </div>
 
                     <div class="relative inline-block mb-6">
@@ -88,7 +117,7 @@
                         <h2 class="text-xl font-medium text-slate-600 mb-2">Dr. Yunfei Ge</h2>
                         
                         <div class="space-y-1 text-sm text-slate-600 mb-6">
-                            <p class="font-bold text-slate-800">具身智能高级研究员</p>
+                            <p class="font-bold text-slate-800">具身智能高级研究员</p><p class="profile-focus">产品规划 · 系统研发 · 项目组织</p>
                             <p>中国电信人工智能研究院 (TeleAI)</p>
                             <p class="text-xs text-slate-400 mt-1">同济大学 工学博士</p>
                         </div>
@@ -100,7 +129,7 @@
                         <h2 class="text-xl font-medium text-slate-600 mb-2">Ph.D.</h2>
                         
                         <div class="space-y-1 text-sm text-slate-600 mb-6">
-                            <p class="font-bold text-slate-800">Senior Researcher</p>
+                            <p class="font-bold text-slate-800">Senior Researcher, Embodied AI</p><p class="profile-focus">Products · Systems · Delivery</p>
                             <p>TeleAI (China Telecom)</p>
                             <p class="text-xs text-slate-400 mt-1">Ph.D. from Tongji University</p>
                         </div>
@@ -133,16 +162,17 @@
                     </div>
                 </div>
                 
+<nav class="page-nav lang-zh hidden" aria-label="页面导航"><a href="#about-zh">简介</a><a href="#news-zh">动态</a><a href="#experience-zh">经历</a><a href="#publications-shared">科研</a></nav><nav class="page-nav lang-en" aria-label="Page navigation"><a href="#about-en">Profile</a><a href="#news-en">News</a><a href="#experience-en">Work</a><a href="#publications-shared">Research</a></nav>
                 <!-- Tags -->
                 <div class="hidden lg:block border-t border-slate-100 pt-6">
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-zh hidden">技术栈 & 兴趣</h3>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-en">Interests</h3>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-zh hidden">产品与技术方向</h3>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 lang-en">Areas of Work</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Humanoid Robots</span>
                         <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Teleoperation</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Parallel Mechanism</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Product Strategy</span>
                         <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Medical Robotics</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">PyTorch/VTK</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Embodied Data</span>
                     </div>
                 </div>
             </aside>
@@ -152,88 +182,25 @@
                 
                 <!-- ================= CHINESE CONTENT ================= -->
                 <div class="lang-zh hidden space-y-16">
-                    <section id="about-zh" class="space-y-4">
-                        <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">个人简介</h2>
-                        <p class="leading-relaxed text-slate-600">
-                            你好！我是<b>葛韵斐</b>，工学博士，毕业于同济大学机械工程专业。现任<b>中国电信人工智能研究院 (TeleAI)</b> 具身智能高级研究员。
-                        </p>
-                        <p class="leading-relaxed text-slate-600">
-                            我拥有深厚的机器人机构学与动力学背景，博士期间致力于<b>并联外固定机器人</b>及其智能矫形系统的研究。目前，我专注于<b>人形机器人</b>与<b>具身智能遥操作</b>系统的研发，成功主导了 TeleBot 系列人形机器人及 TeleHumOS 全身遥操作系统的搭建。我的研究目标是打通从“机械设计”到“智能控制”的全链路，推动通用机器人在真实场景中的应用。
-                        </p>
-                    </section>
+                    <section id="about-zh" class="portfolio-intro"><div class="eyebrow">个人简介 / PROFILE</div><h2>以产品判断连接技术，<br><span>以系统能力推进落地。</span></h2><p>我是<strong>葛韵斐</strong>，同济大学机械工程博士，现任<strong>中国电信人工智能研究院（TeleAI）具身智能高级研究员</strong>，曾任西门子中国研究院高级研究员。我的工作聚焦具身智能产品规划、系统研发与项目组织，连接客户场景、研究成果与工程实现。</p><p>我主导的产品研发覆盖<strong>全尺寸与小尺寸人形机器人、轮式双臂机器人、仿生形态机器人、具身数据采集设备及遥操作系统</strong>。从产品方向与总体方案，到机械、电气、嵌入式软件、算法和交互的协同集成，我负责组织团队将分散的技术能力构建为完整产品。</p><p>我重视产品的形态、体验与细节，也关注成本、安全、维护和迭代。通过场景分析、技术取舍与项目推进，让机器人具备可验证的应用能力，并持续探索可复制的行业解决方案。博士期间的机器人机构学、动力学与医疗机器人研究，为这项工作提供了系统设计基础。</p><div class="work-chain"><div><small>01</small><b>场景与产品定义</b></div><div><small>02</small><b>总体方案与取舍</b></div><div><small>03</small><b>跨领域研发组织</b></div><div><small>04</small><b>工程验证与应用</b></div></div></section>
 
-                    <section id="news-zh" class="space-y-4">
-                         <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
-                            <h2 class="text-2xl font-bold text-slate-900">最新动态</h2>
-                         </div>
-                        <div class="space-y-4">
-                            <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2025.07</span>
-                                <div>
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 mr-2">WAIC 2025</span>
-                                    <span class="text-slate-700"><b>TeleHumOS-W</b> 全身遥操作系统在 WAIC 2025 展出，并获得<b>央视报道</b>。</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2025.01</span>
-                                <div>
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 mr-2">New Journey</span>
-                                    <span class="text-slate-700">加入<b>中国电信人工智能研究院 (TeleAI)</b>，担任具身智能高级研究员。</span>
-                                </div>
-                            </div>
-                             <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2023.10</span>
-                                <div>
-                                    <span class="text-slate-700">加入<b>西门子(中国)研究院</b>未来自动化部，担任高级研究员。</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2023.08</span>
-                                <div>
-                                    <span class="text-slate-700">获得同济大学机械工程专业<b>工学博士</b>学位。</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <section id="news-zh"><div class="section-head"><h2>最新动态</h2><span>IN THE FIELD · 2023–2026</span></div><ol class="news-list"><li class="news-item"><time datetime="2026-08">2026.08</time><div><h3>数博会 · 具身智能走进白酒场景</h3><p>自研轮式双臂机器人参加贵州数博会，展示白酒场景应用。机器人与“翼酒保”精准计量终端协同，将移动、感知与操作能力带入行业任务，相关成果获多家媒体报道。</p><a class="press-link" href="https://finance.sina.com.cn/wm/2026-08-31/doc-iniqfear7307332.shtml" target="_blank" rel="noopener noreferrer">数博会报道 ↗</a></div></li><li class="news-item"><time datetime="2026-07">2026.07</time><div><h3>WAIC 2026 · 自研机器人与远程遥操作</h3><p>自研机器人及人体动作驱动的远程遥操作系统在中国电信主展区展出，展示远端操作、现场执行与感知回传的协同，获得央视、东方卫视等媒体报道。</p><a class="press-link" href="https://www.xinhuanet.com/info/20260719/ee469711c8174f909e856ed7df1486df/c.html" target="_blank" rel="noopener noreferrer">新华社现场报道 ↗</a></div></li><li class="news-item"><time datetime="2025-07">2025.07</time><div><h3>WAIC 2025 · 全身遥操作系统首次亮相</h3><p>负责研发的 TeleHumOS-W 全身遥操作系统在大会展出，相关应用出现在央视报道中。</p><a class="press-link" href="https://www.teleai.com.cn/learnMore/newsDetail?newsId=bbc45ef3450a4bb9930cc5269fff43db" target="_blank" rel="noopener noreferrer">TeleAI 报道回顾 ↗</a></div></li><li class="news-item"><time datetime="2025-01">2025.01</time><div><h3>加入 TeleAI 具身智能研究中心</h3><p>担任具身智能高级研究员，推进多形态机器人、数据采集与遥操作系统的产品研发。</p></div></li><li class="news-item"><time datetime="2023-08">2023.08</time><div><h3>加入西门子中国研究院</h3><p>在未来自动化部担任高级研究员，从事机器人及人工智能产品研发。</p></div></li></ol></section>
 
                     <section id="experience-zh" class="space-y-8">
                         <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">工作与项目经历</h2>
                         <div class="relative border-l-2 border-slate-200 ml-3 space-y-6 pb-4">
                             <!-- TeleAI -->
-                            <div class="relative pl-8 group">
-                                <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-primary-600 rounded-full group-hover:scale-110 transition-transform"></div>
-                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                                    <h3 class="text-lg font-bold text-slate-900">中国电信人工智能研究院 (TeleAI)</h3>
-                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2025.01 - 至今</span>
-                                </div>
-                                <div class="text-sm text-primary-700 font-bold mb-3">具身智能高级研究员 | 具身智能研究中心</div>
-                                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100 space-y-2">
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleBotL 全尺寸人形机器人</span>：负责研发与搭建，提出了热插拔电池电容换电补能方案。</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleBotM 小尺寸导览机器人</span>：首创业内领先的<b>六自由度并联颈部关节</b>，提升了交互灵活性。</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleHumOS-W 全身遥操作系统</span>：作为 WAIC 2025 重要展项展出。</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleHumOS-1 同构主从臂遥操作系统</span>：完成了系统研发与搭建。</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Siemens -->
+ <div class="relative pl-8 group"><div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-primary-600 rounded-full"></div>
+ <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2"><h3 class="text-lg font-bold text-slate-900">中国电信人工智能研究院（TeleAI）</h3><span class="text-sm font-mono text-slate-500">2025.01 – 至今</span></div>
+ <div class="text-sm text-primary-700 font-bold mb-3">具身智能高级研究员｜产品研发与项目组织</div><p class="role-summary">负责具身智能产品方向、总体方案与研发项目推进，组织硬件与产品团队，协同算法研究。把场景需求转化为产品定义，协调研发任务、技术依赖、进度与联调，持续推进工程验证和应用适配。</p><div class="product-index"><details class="product-entry" open><summary><div><h4>轮式双臂机器人</h4><p>面向移动操作的整机产品定义与研发组织</p></div></summary><div class="product-detail"><p>提出产品方向并主导总体方案，统筹双臂、可调整作业姿态的躯干、移动底盘、末端执行器及感知计算系统。协调结构、电气、嵌入式与算法开发，兼顾作业空间、操作能力、交互体验与维护便利性。</p><p>推进模块复用、机电解耦、内置线束、供电安全与系统联调；结合白酒等场景探索产品能力与行业任务的适配。</p></div></details><details class="product-entry"><summary><div><h4>全尺寸与小尺寸人形机器人</h4><p>多构型设计、模块化平台与整机搭建</p></div></summary><div class="product-detail"><p>负责 TeleBot 系列全尺寸与小尺寸人形机器人的研发与搭建，围绕不同机型的作业和交互需求开展构型、关节及总体系统设计。</p><p>提出电池与电容协同的换电补能方案，推进机械模块、电气架构和控制接口复用，支持跨机型研发与迭代。</p></div></details><details class="product-entry"><summary><div><h4>具身数据采集系统</h4><p>手持式与头戴式设备的协同产品体系</p></div></summary><div class="product-detail"><p>主导手持式和头戴式数采设备的产品定义、总体方案与研发组织，围绕操作过程及第一视角数据采集，协同多模态感知、轨迹采集、多设备同步及软硬件开发。</p><p>统筹结构与交互细节、佩戴舒适性、操作流程及模块化扩展，让设备设计服务于持续、可用的数据采集。</p></div></details><details class="product-entry"><summary><div><h4>全身及主从臂遥操作</h4><p>连接人体动作、远程通信与机器人执行</p></div></summary><div class="product-detail"><p>负责 TeleHumOS-W 全身遥操作及 TeleHumOS-I 同构主从臂式遥操作系统研发搭建，推进同构与异构机型的动作映射、重定向及控制适配。</p><p>集成操作端、上位机、机载控制与状态反馈，推进基于 5G 的低时延跨城域遥操作。系统在 WAIC 2025、2026 中国电信展区展示，并获得媒体报道。</p></div></details><details class="product-entry"><summary><div><h4>仿生形态机器人 · 具身恐龙</h4><p>面向交互需求的形态与系统设计</p></div></summary><div class="product-detail"><p>主导具身恐龙等仿生形态机器人的产品研发，将机械构型、动作表达、人机交互及工程实现结合，探索不同于人形的具身产品形态。</p><p>围绕使用需求统筹产品外形、运动能力与系统集成，协调跨领域研发与产品迭代。</p></div></details><details class="product-entry"><summary><div><h4>TelebotOS 与机电系统平台</h4><p>统一接口、配置化适配与虚实一致</p></div></summary><div class="product-detail"><p>统筹机器人硬件封装、策略调度及机电系统集成，推进真机与仿真一致的数据接口、配置化硬件适配、状态记录及回放工具建设。</p><p>协调语音交互、遥操作、传感与控制能力接入，结合位置、力矩、速度保护及电源管理，形成支撑多产品研发的共用基础。</p></div></details></div><p class="delivery-note"><strong>产品与项目方法：</strong>从客户使用流程确定需求与边界，通过总体架构和技术取舍组织研发，将机械、电气、软件与算法形成完整系统；以验证结果和场景反馈驱动迭代，关注成本、可维护性及商业化适配。</p></div>
+<!-- Siemens -->
                             <div class="relative pl-8 group">
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
                                 <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                     <h3 class="text-lg font-bold text-slate-900">西门子(中国)有限公司中国研究院</h3>
-                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2023.10 - 2025.01</span>
+                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2023.08 - 2025.01</span>
                                 </div>
-                                <div class="text-sm text-slate-600 font-medium mb-2">高级研究员 | 未来自动化部</div>
+                                <div class="text-sm text-slate-600 font-medium mb-2">高级研究员 | 未来自动化部</div><p class="text-sm text-slate-600 leading-relaxed">从事机器人及人工智能产品研发，结合工业自动化需求开展技术研发与跨领域协作。</p>
                             </div>
                             <!-- EY -->
                             <div class="relative pl-8 group">
@@ -258,9 +225,9 @@
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
                                 <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                     <h3 class="text-lg font-bold text-slate-900">同济大学</h3>
-                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2017.09 - 2023.08</span>
+                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2017.09 - 2023.07</span>
                                 </div>
-                                <div class="text-sm text-slate-600 font-medium mb-3">工学博士 | 机械设计及理论</div>
+                                <div class="text-sm text-slate-600 font-medium mb-3">工学博士 | 机械设计及理论</div><p class="text-sm text-slate-600 leading-relaxed">研究机器人机构、动力学与机电系统。参与国家重点研发专项中的并联外固定机器人及计算机辅助骨骼矫形系统研发，覆盖图像处理、机构设计、仿真与控制；开展与上海振华重工合作的机械臂 VR 仿真及自动驾驶车辆动力学研究。</p>
                             </div>
                         </div>
                     </section>
@@ -268,89 +235,25 @@
 
                 <!-- ================= ENGLISH CONTENT ================= -->
                 <div class="lang-en space-y-16">
-                    <section id="about-en" class="space-y-4">
-                        <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Biography</h2>
-                        <p class="leading-relaxed text-slate-600">
-                            Hi! I am <b>Yunfei Ge</b>. I received my Ph.D. in Mechanical Engineering from Tongji University. I am currently a Senior Researcher at <b>TeleAI (China Telecom Artificial Intelligence Institute)</b>, focusing on Embodied AI.
-                        </p>
-                        <p class="leading-relaxed text-slate-600">
-                            With a solid background in robot mechanisms and dynamics, my Ph.D. research focused on parallel external fixation robots and intelligent orthopedic systems. Currently, I am dedicated to the R&D of <b>Humanoid Robots</b> and <b>Embodied Teleoperation Systems</b>. I have successfully led the development of the TeleBot series humanoids and the TeleHumOS whole-body teleoperation system. My goal is to bridge the gap between mechanical design and intelligent control to promote the deployment of general-purpose robots in real-world scenarios.
-                        </p>
-                    </section>
+                    <section id="about-en" class="portfolio-intro"><div class="eyebrow">PROFILE / PRODUCTS & SYSTEMS</div><h2>Defining the product.<br><span>Engineering the whole system.</span></h2><p>I am <strong>Yunfei Ge</strong>, a Senior Researcher in Embodied AI at <strong>TeleAI, China Telecom</strong>. I received my Ph.D. in Mechanical Engineering from Tongji University and previously worked as a Senior Researcher at Siemens Research in China. My work connects customer needs, research capabilities and product engineering.</p><p>I lead product definition and development across <strong>full-size and compact humanoids, wheeled dual-arm robots, biomimetic robots, embodied data collection devices and teleoperation systems</strong>. I organize hardware and product teams and collaborate with algorithm researchers to integrate mechanics, electronics, embedded software, control and interaction into complete systems.</p><p>I care about product form, interaction and the details of everyday use, alongside cost, safety, maintainability and iteration. My focus is on making deliberate engineering trade-offs, validating systems in real applications and developing repeatable solutions. Earlier research in mechanisms, dynamics and medical robotics underpins this systems perspective.</p><div class="work-chain"><div><small>01</small><b>Understand the use case</b></div><div><small>02</small><b>Define the architecture</b></div><div><small>03</small><b>Organize engineering</b></div><div><small>04</small><b>Validate in application</b></div></div></section>
 
-                    <section id="news-en" class="space-y-4">
-                         <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
-                            <h2 class="text-2xl font-bold text-slate-900">News</h2>
-                         </div>
-                        <div class="space-y-4">
-                            <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2025.07</span>
-                                <div>
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 mr-2">WAIC 2025</span>
-                                    <span class="text-slate-700"><b>TeleHumOS-W</b> teleoperation system was exhibited at WAIC 2025 and reported by <b>CCTV</b>.</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2025.01</span>
-                                <div>
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 mr-2">New Journey</span>
-                                    <span class="text-slate-700">Joined <b>TeleAI</b> as a Senior Researcher in Embodied AI.</span>
-                                </div>
-                            </div>
-                             <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2023.10</span>
-                                <div>
-                                    <span class="text-slate-700">Joined <b>Siemens (China) Research</b>, Future Automation Dept.</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-4 items-start">
-                                <span class="flex-shrink-0 w-24 text-sm text-slate-500 font-mono mt-0.5">2023.08</span>
-                                <div>
-                                    <span class="text-slate-700">Received <b>Ph.D.</b> degree from Tongji University.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <section id="news-en"><div class="section-head"><h2>News & Highlights</h2><span>IN THE FIELD · 2023–2026</span></div><ol class="news-list"><li class="news-item"><time datetime="2026-08">2026.08</time><div><h3>Big Data Expo · Robotics for the baijiu industry</h3><p>Our wheeled dual-arm robot was presented at the Big Data Expo in Guizhou, demonstrating a baijiu-industry application with the “Yi Jiu Bao” precision measurement terminal. The work brought mobility, perception and manipulation together around an industry task and received media coverage.</p><a class="press-link" href="https://finance.sina.com.cn/wm/2026-08-31/doc-iniqfear7307332.shtml" target="_blank" rel="noopener noreferrer">Expo coverage (Chinese) ↗</a></div></li><li class="news-item"><time datetime="2026-07">2026.07</time><div><h3>WAIC 2026 · Robots and remote whole-body operation</h3><p>Our robots and human-motion-driven teleoperation system were exhibited in China Telecom’s main exhibition area. The demonstration connected remote input, robot execution and sensory feedback, with coverage from CCTV and Dragon TV.</p><a class="press-link" href="https://www.xinhuanet.com/info/20260719/ee469711c8174f909e856ed7df1486df/c.html" target="_blank" rel="noopener noreferrer">Xinhua report (Chinese) ↗</a></div></li><li class="news-item"><time datetime="2025-07">2025.07</time><div><h3>WAIC 2025 · Whole-body teleoperation</h3><p>TeleHumOS-W, the whole-body teleoperation system I helped bring through development, was exhibited at WAIC 2025. Its applications also appeared in CCTV coverage.</p><a class="press-link" href="https://www.teleai.com.cn/learnMore/newsDetail?newsId=bbc45ef3450a4bb9930cc5269fff43db" target="_blank" rel="noopener noreferrer">TeleAI recap (Chinese) ↗</a></div></li><li class="news-item"><time datetime="2025-01">2025.01</time><div><h3>Joined TeleAI’s Embodied AI Research Center</h3><p>Started as a Senior Researcher, developing robotic products, embodied data collection devices and teleoperation systems.</p></div></li><li class="news-item"><time datetime="2023-08">2023.08</time><div><h3>Joined Siemens Research in China</h3><p>Worked as a Senior Researcher in Future Automation, focusing on robotics and AI product development.</p></div></li></ol></section>
 
                     <section id="experience-en" class="space-y-8">
                         <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Experience</h2>
                         <div class="relative border-l-2 border-slate-200 ml-3 space-y-6 pb-4">
                             <!-- TeleAI -->
-                            <div class="relative pl-8 group">
-                                <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-primary-600 rounded-full group-hover:scale-110 transition-transform"></div>
-                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                                    <h3 class="text-lg font-bold text-slate-900">TeleAI (China Telecom Artificial Intelligence Institute)</h3>
-                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2025.01 - Present</span>
-                                </div>
-                                <div class="text-sm text-primary-700 font-bold mb-3">Senior Researcher | Embodied AI Research Center</div>
-                                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100 space-y-2">
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleBotL Humanoid</span>: Led the R&D, proposed a hot-swappable battery/capacitor energy replacement solution.</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleBotM Guide Robot</span>: Pioneered a <b>6-DOF parallel neck mechanism</b>, enhancing interaction flexibility.</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleHumOS-W Teleoperation</span>: Exhibited as a key highlight at WAIC 2025.</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
-                                        <p class="text-sm text-slate-700"><span class="font-bold">TeleHumOS-1 System</span>: Completed the development of the isomorphic master-slave teleoperation system.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Siemens -->
+ <div class="relative pl-8 group"><div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-primary-600 rounded-full"></div>
+ <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2"><h3 class="text-lg font-bold text-slate-900">TeleAI · China Telecom</h3><span class="text-sm font-mono text-slate-500">2025.01 – Present</span></div>
+ <div class="text-sm text-primary-700 font-bold mb-3">Senior Researcher · Product & Systems Development</div><p class="role-summary">I lead product definition, system architecture and development coordination, organizing hardware and product teams in collaboration with algorithm researchers. My role connects use cases with engineering decisions, development milestones, integration and application validation.</p><div class="product-index"><details class="product-entry" open><summary><div><h4>Wheeled dual-arm robots</h4><p>Product architecture and multidisciplinary development</p></div></summary><div class="product-detail"><p>Defined the product direction and system architecture across arms, adjustable torso, mobile base, end effectors, sensing and compute. Coordinated mechanical, electrical, embedded and algorithm development around workspace, manipulation, interaction and maintainability.</p><p>Advanced module reuse, electromechanical separation, internal cabling, power safety and system integration, while exploring application fit in scenarios such as the baijiu industry.</p></div></details><details class="product-entry"><summary><div><h4>Full-size and compact humanoids</h4><p>Multiple configurations on a modular engineering foundation</p></div></summary><div class="product-detail"><p>Led the development and assembly of full-size and compact TeleBot humanoids, defining configurations, joints and system architecture for different manipulation and interaction requirements.</p><p>Proposed battery–capacitor energy support for battery replacement and advanced reuse of mechanical modules, electrical architectures and control interfaces across models.</p></div></details><details class="product-entry"><summary><div><h4>Embodied data collection systems</h4><p>Coordinated handheld and head-mounted devices</p></div></summary><div class="product-detail"><p>Led product definition, architecture and development organization for handheld and head-mounted devices, combining multimodal sensing, trajectory capture, multi-device synchronization and hardware–software integration.</p><p>Balanced mechanical and interaction design with wearing comfort, operating workflow and modular expansion to support sustained data collection.</p></div></details><details class="product-entry"><summary><div><h4>Whole-body and master–slave teleoperation</h4><p>Human motion, remote communication and robot execution</p></div></summary><div class="product-detail"><p>Developed and assembled TeleHumOS-W whole-body and TeleHumOS-I isomorphic master–slave systems, advancing motion mapping, retargeting and control adaptation across isomorphic and heterogeneous robots.</p><p>Integrated operator input, host processing, onboard control and feedback, including 5G-based low-latency intercity operation. Systems were exhibited at China Telecom’s WAIC 2025 and 2026 stands and received media coverage.</p></div></details><details class="product-entry"><summary><div><h4>Biomimetic robots</h4><p>Embodied dinosaurs and alternative interactive forms</p></div></summary><div class="product-detail"><p>Led product development for biomimetic robots, including an embodied dinosaur, bringing together mechanical configuration, expressive motion, interaction and engineering implementation.</p><p>Coordinated product form, motion capability and system integration around intended use, extending the portfolio beyond humanoid configurations.</p></div></details><details class="product-entry"><summary><div><h4>TelebotOS and electromechanical platforms</h4><p>Common interfaces, configurable hardware and simulation</p></div></summary><div class="product-detail"><p>Coordinated hardware abstraction, policy dispatch and system integration, with consistent interfaces for simulation and physical robots, configurable hardware adaptation, state logging and replay tools.</p><p>Integrated voice interaction, teleoperation, sensing and control alongside position, torque and velocity protection and power management, supporting development across robotic products.</p></div></details></div><p class="delivery-note"><strong>How I work:</strong> start with customer workflows, define requirements and boundaries, organize development around architectural decisions, and integrate mechanics, electronics, software and algorithms. Use validation and application feedback to guide iteration, with attention to cost, maintainability and commercial fit.</p></div>
+<!-- Siemens -->
                             <div class="relative pl-8 group">
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
                                 <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                     <h3 class="text-lg font-bold text-slate-900">Siemens Ltd., China, Corporate Technology</h3>
-                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2023.10 - 2025.01</span>
+                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2023.08 - 2025.01</span>
                                 </div>
-                                <div class="text-sm text-slate-600 font-medium mb-2">Senior Researcher | Future Automation</div>
+                                <div class="text-sm text-slate-600 font-medium mb-2">Senior Researcher | Future Automation</div><p class="text-sm text-slate-600 leading-relaxed">Worked on robotics and AI product development, connecting industrial automation needs with multidisciplinary research and engineering.</p>
                             </div>
 
                             <!-- EY -->
@@ -378,9 +281,9 @@
                                 <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-white border-4 border-slate-300 rounded-full group-hover:border-slate-500 transition-colors"></div>
                                 <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                     <h3 class="text-lg font-bold text-slate-900">Tongji University</h3>
-                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2017.09 - 2023.08</span>
+                                    <span class="text-sm font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2017.09 - 2023.07</span>
                                 </div>
-                                <div class="text-sm text-slate-600 font-medium mb-3">Ph.D. | Mechanical Engineering</div>
+                                <div class="text-sm text-slate-600 font-medium mb-3">Ph.D. | Mechanical Engineering</div><p class="text-sm text-slate-600 leading-relaxed">Studied robotic mechanisms, dynamics and electromechanical systems. Worked on a national key R&amp;D project in parallel external-fixation robots and computer-assisted bone correction, spanning image processing, mechanism design, simulation and control. Earlier projects with ZPMC covered robot-arm VR simulation and autonomous vehicle dynamics.</p>
                             </div>
                         </div>
                     </section>
@@ -396,17 +299,45 @@
 
                     <div class="space-y-6">
                         
+                        <!-- GN0 -->
+                        <div class="pl-4">
+                            <a href="https://arxiv.org/abs/2606.03682" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
+                                GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation
+                            </a>
+                            <div class="text-sm text-slate-600 mt-1">
+                                Xinhai Li, Xiaotao Zhang, Yuehao Huang, Jiankun Dong, Tianhang Wang, Sunyao Zhou, Yunzi Wu, Chengnuo Sun, <span class="font-bold text-slate-900">Yunfei Ge</span>, Qizhen Weng, Chi Zhang, Chenjia Bai, Xuelong Li
+                            </div>
+                            <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
+                                <span>arXiv Preprint, 2026</span>
+                                <a href="https://arxiv.org/abs/2606.03682" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
+                            </div>
+                        </div>
+
                         <!-- Paper 0 -->
                         <div class="pl-4">
-                            <a href="https://arxiv.org/abs/2509.02055" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
+                            <a href="https://scholar.google.com.hk/citations?view_op=view_citation&amp;hl=en&amp;user=FDLIY9oAAAAJ&amp;citation_for_view=FDLIY9oAAAAJ:Tyk-4Ss8FVUC" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
                                 Align-Then-stEer: Adapting the Vision-Language Action Models through Unified Latent Guidance
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
-                                Yang Zhang, Chenwei Wang, Ouyang Lu, Yuan Zhao, <span class="font-bold text-slate-900">Yunfei Ge</span>, Zhenglong Sun, Xiu Li, Chi Zhang, Chenjia Bai, Xuelong Li
+                                Yang Zhang, Chenwei Wang, Yuan Zhao, <span class="font-bold text-slate-900">Yunfei Ge</span>, Zhenglong Sun, Xiu Li, Chi Zhang, Chenjia Bai, Xuelong Li
+                            </div>
+                            <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
+                                <span>International Conference on Learning Representations (ICLR), 2026</span>
+                                <a href="https://arxiv.org/abs/2509.02055" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
+                            </div>
+                        </div>
+
+                        <!-- RoboTwin challenge report; author omissions explicitly marked, original order retained -->
+                        <div class="pl-4">
+                            <a href="https://arxiv.org/abs/2506.23351" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-slate-900 hover:text-primary-600 transition-colors paper-title">
+                                Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboration Challenge at CVPR 2025 MEIS Workshop
+                            </a>
+                            <div class="text-sm text-slate-600 mt-1">
+                                Tianxing Chen, Kaixuan Wang, Zhaohui Yang, …, <span class="font-bold text-slate-900">Yunfei Ge</span>, …, Feng Xu
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>arXiv Preprint, 2025</span>
-                                <a href="https://arxiv.org/abs/2509.02055" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
+                                <a href="https://arxiv.org/abs/2506.23351" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
 
@@ -416,10 +347,10 @@
                                 A 3D Reconstruction Method based on Multi-views of Contours Segmented with CNN-Transformer for Long Bones
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
-                                <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yidong Shen, Yuantao Sun
+                                <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yidong Shen, Yuantao Sun, Chongyang Huang
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
-                                <span>International Journal of Computer Assisted Radiology and Surgery, 2022</span>
+                                <span>International Journal of Computer Assisted Radiology and Surgery, 17:1891–1902, 2022</span>
                                 <a href="https://link.springer.com/article/10.1007/s11548-022-02701-4" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
@@ -430,10 +361,10 @@
                                 Grayscale Medical Image Segmentation Method based on 2D&3D Object Detection with Deep Learning
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
-                                <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yidong Shen, Yuantao Sun
+                                <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yuantao Sun, Yidong Shen, Xijiong Wang
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
-                                <span>BMC Medical Imaging, 2022</span>
+                                <span>BMC Medical Imaging, 22:33, 2022</span>
                                 <a href="https://link.springer.com/article/10.1186/s12880-022-00760-2" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
@@ -447,7 +378,7 @@
                                 Miao Chen, Qing Zhang, <span class="font-bold text-slate-900">Yunfei Ge</span>, Xianrong Qin, Yuantao Sun
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
-                                <span>Mathematical and Computer Modelling of Dynamical Systems, 2022</span>
+                                <span>Mathematical and Computer Modelling of Dynamical Systems, 27(1):347–372, 2021</span>
                                 <a href="https://www.tandfonline.com/doi/full/10.1080/13873954.2021.1920618" target="_blank" rel="noopener noreferrer" class="minimal-link">[PDF/Link]</a>
                             </div>
                         </div>
@@ -490,8 +421,8 @@
                                 <span class="lang-en">Spreader aided wire rope traction type active anti-swing method for ARMG (in Chinese)</span>
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
-                                <span class="lang-zh hidden"><span class="font-bold text-slate-900">葛韵斐</span>, 张氢, 秦仙蓉, 孙远韬</span>
-                                <span class="lang-en"><span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Xianrong Qin, Yuantao Sun</span>
+                                <span class="lang-zh hidden">张氢, <span class="font-bold text-slate-900">葛韵斐</span>, 陈淼, 孙远韬, 张凯, 徐亨</span>
+                                <span class="lang-en">Qing Zhang, <span class="font-bold text-slate-900">Yunfei Ge</span>, Miao Chen, Yuantao Sun, Kai Zhang, Heng Xu</span>
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span><span class="lang-zh hidden">哈尔滨工业大学学报</span><span class="lang-en">Journal of Harbin Institute of Technology</span>, 2020</span>
@@ -521,7 +452,7 @@
                                 Optimization of deformity correction modes and their control methods for hexapod robot based external fixator
                             </a>
                             <div class="text-sm text-slate-600 mt-1">
-                                <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yuantao Sun
+                                <span class="font-bold text-slate-900">Yunfei Ge</span>, Qing Zhang, Yuantao Sun, Xianrong Qing
                             </div>
                             <div class="flex items-center gap-3 mt-1 text-sm text-slate-500 italic">
                                 <span>ICMIMT 2021</span>
@@ -634,6 +565,7 @@
         });
 
         function switchLang(lang) {
+            document.querySelectorAll('[data-lang-switch]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.langSwitch === lang)));
             const zhElements = document.querySelectorAll('.lang-zh');
             const enElements = document.querySelectorAll('.lang-en');
             const btnZh = document.getElementById('btn-zh');
